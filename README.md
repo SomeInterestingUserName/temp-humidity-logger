@@ -8,7 +8,7 @@ Scripts for receiving and logging BLE broadcasts from the Govee H5075 temperatur
 ## Running the Logging Script Periodically
 On Linux, you can set up a `cron` job to log sensor measurements at a certain interval. For instance, you can put this in your `/etc/crontab` file to record every 15th minute of the hour (X:00, X:15, X:30, X:45):
 
-```*/15  *    * * * [username] python3 ~/TempLogger.py```
+```*/15  *    * * * [username] python3 [path_to_log_sensors.py]/log_sensors.py```
 
 ## What You'll Need
 * A laptop or computer with a wireless card that supports Bluetooth Low Energy (BLE)
