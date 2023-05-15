@@ -1,6 +1,8 @@
 # temp-humidity-logger
 Scripts for receiving and logging BLE broadcasts from the Govee H5075 temperature/humidity sensors. These sensors periodically send out BLE broadcasts with temperature, humidity, and battery status. We can "sniff" for these messages and keep a log of their values. The main advantage of this method is that the sensors broadcast regardless of whether something is listening, so it has no impact on their battery life. This is in contrast to connecting directly to the sensors and either querying their sensor values or requesting a download of stored data, which requires that they open an active connection to your device. 
 
+For more details, you can read my write-up here: [Logging Sensor Data to the Cloud with an Old MacBook](https://jchen-cs.github.io/logging-sensor-data-to-the-cloud-with-an-old-macbook/)
+
 ## Files
 * `scan_ble.py` : Scans for BLE advertisements for 20s and prints out decoded data for any H5075 sensors it detects.
 * `log_sensors.py` : Appends at most one sensor measurement for each H5075 sensor it detects within a 20-second window to a log file. Be sure to change the log file path to fit your needs.
